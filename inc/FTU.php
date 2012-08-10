@@ -3,7 +3,7 @@
 Description: 42U Class.
 Author: Rick Bush | 42U
 Author URI: http://www.42umbrellas.com/rick/
-Version: 0.1
+Version: 0.2
 
 Copyright (c) 2012 42Umbrellas (http://www.42umbrellas.com)
 
