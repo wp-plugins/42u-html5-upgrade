@@ -15,7 +15,7 @@ The 42U HTML5 Upgrade prepares your older site for HTML5 and allows you to start
 
 The 42U HTML5 Upgrade plugin loads  [Modernizr](http://www.modernizr.com/ "Modernizr"), enables the HTML5 Schema in the [TinyMCE Editor](http://www.tinymce.com/ "TinyMCE") and adds HTML5 elements to the TinyMCE style list. 
 
-The custom Modernizr build includes all CSS3, HTML5 and Misc tests, as well as the html5shiv w/printshiv and Modernizr.load(). See the options we used [here](http://42umbrellas.admin.haleywebsite.com/files/2009/06/modernizer2.6.1build.png "here").
+The custom Modernizr build includes all CSS3, HTML5 and Misc tests, as well as the html5shiv w/printshiv and Modernizr.load(). See the options we used [here](http://www.42umbrellas.com/files/2009/06/modernizer2.6.1build.png "here").
 
 You can turn these functions off individually if you wish!
         
