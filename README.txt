@@ -3,7 +3,7 @@ Contributors: 42urick
 Tags: HTML5
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ And good news for you, there is a polyfill for nearly every HTML5 feature that M
 See https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills for an extensive list of available polyfills.
 
 == Changelog ==
+
+= 1.1 =
+* Added TinyMCE visualblocks plugin. This makes HTML5 elements easier to work with in the visual editor.
 
 = 1.0 =
 * Initial release.
