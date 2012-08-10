@@ -23,13 +23,18 @@ class _42UHTML5 {
 
     public function __construct(){
     
-        /* actions */
         $this->options = get_option('ftu_html5_options');
         
+        /* actions */
+        add_action( 'admin_init', array($this,'check_tinyMCE'));
         add_action( 'admin_head', array($this,'custom_post_type_icon'));
         
         /* queue frontend scripts */
 		add_action('wp_enqueue_scripts', array($this,'script_init_42U'));
+		
+		/* queue admin scripts */
+		add_action('admin_enqueue_scripts', array($this,'admin_script_init_42U'));
+		
         add_action('admin_menu', array($this,'register_42U_page'));  
         /* filters */
         if ($this->options['disable_tinyMCE'] !='1') {
@@ -38,9 +43,32 @@ class _42UHTML5 {
 
     }
     
+    public function check_tinyMCE() {
+        // check for visualblocks plugin
+        // wp root /wp-includes/js/tinymce/plugins/visualblocks
+        $theme_root = get_theme_root();
+        $root = str_replace('wp-content/themes','', $theme_root);
+        $visualblocks_src = plugin_dir_path( __FILE__ ) . 'inc/tinyMCE/plugins/visualblocks';
+        $icons_src = plugin_dir_path( __FILE__ ) . 'inc/tinyMCE/themes/advanced/img/icons.gif';
+        $tinymce_plugins = $root. 'wp-includes/js/tinymce/plugins/';
+        $tinymce_icons = $root . 'wp-includes/js/tinymce/themes/advanced/img/icons.gif';
+        
+        if (is_dir($tinymce_plugins . 'visualblocks')) {
+            // echo 'rejoice, all is well';
+        } else {
+            // copy in the visualblocks plugin
+            $result = FTU::smartCopy($visualblocks_src, $tinymce_plugins);
+            // copy in the updated images
+            $result = FTU::smartCopy($icons_src, $tinymce_icons);
+        }
+        
+    }
+    
     public function register_42U_TinyMCE($in) {
         $in['schema']='html5';
         $in['end_container_on_empty_block'] = 'true';
+        $in['plugins'] .= ",visualblocks";
+        $in['visualblocks_default_state'] = 'true';
         // HTML5 formats
         $in['style_formats'] = "[
                     {title : 'Heading 1', block : 'h1'},
@@ -54,14 +82,13 @@ class _42UHTML5 {
                     {title : 'pre', block : 'pre'},
                     {title : 'section', block : 'section', wrapper: true, merge_siblings: false},
                     {title : 'article', block : 'article', wrapper: true, merge_siblings: false},
-                    {title : 'blockquote', block : 'blockquote', wrapper: true},
                     {title : 'hgroup', block : 'hgroup', wrapper: true},
                     {title : 'aside', block : 'aside', wrapper: true},
                     {title : 'figure', block : 'figure', wrapper: true},
                     {title : 'figcaption', block : 'figcaption', wrapper: true}        
         ]";
         
-        $in['theme_advanced_buttons2'] = "styleselect,underline,justifyfull,forecolor,|,pastetext,pasteword,removeformat,|,charmap,|,outdent,indent,|,undo,redo,wp_help";
+        $in['theme_advanced_buttons2'] = "styleselect,underline,justifyfull,forecolor,|,pastetext,pasteword,removeformat,|,charmap,|,outdent,indent,|,undo,redo,wp_help,|,visualblocks";
         
         return $in;
     }
@@ -119,7 +146,7 @@ class _42UHTML5 {
         
         /* register options */
         register_setting('ftu_html5_options','ftu_html5_options'); // 3rd param = optional callback
-        add_settings_section('ftu_html5_main_section','HTML5 Settings','ftu_html5_main_section_cb',__FILE__);
+        add_settings_section('ftu_html5_main_section','HTML5 Settings',array($this,'ftu_html5_main_section_cb'),__FILE__);
         add_settings_field('disable_tinyMCE',"Disable the HTML5 Schema in TinyMCE, I'd rather use HTML4",array($this,'disable_tinyMCE_setting'),__FILE__,'ftu_html5_main_section');
         add_settings_field('disable_modernizr',"Skip Modernizr, I don't need it!",array($this,'disable_modernizr_setting'),__FILE__,'ftu_html5_main_section');
         
@@ -132,6 +159,11 @@ class _42UHTML5 {
             wp_register_script( 'modernizr', plugins_url('js/modernizr.custom.2.6.1.js',__FILE__,false) );        
             wp_enqueue_script( 'modernizr' );
         }
+    }
+    
+    public function admin_script_init_42U() {
+        wp_register_style( 'HTML5Stylesheet', plugins_url('css/style.css', __FILE__) );
+        wp_enqueue_style( 'HTML5Stylesheet' );
     }
     
     public function html5_opts_42U() {

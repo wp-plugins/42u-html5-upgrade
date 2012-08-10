@@ -1,1 +1,5 @@
-//42U default styles
+/* css to add new icon for visual blocks to tinyMCE */
+
+.wp_themeSkin span.mce_visualblocks {
+    background-position: -40px -40px;
+}
