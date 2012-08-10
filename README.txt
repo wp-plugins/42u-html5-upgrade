@@ -1,6 +1,5 @@
 === 42U HTML5 Upgrade ===
 Contributors: 42urick
-Donate link: http://example.com/
 Tags: HTML5
 Requires at least: 3.0
 Tested up to: 3.4.1
