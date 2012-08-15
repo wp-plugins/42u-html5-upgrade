@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: 42U HTML5
-Plugin URI: http://42umbrellas.admin.haleywebsite.com/42u-html5-upgrade/
+Plugin URI: http://www.42umbrellas.com/42u-html5-upgrade/
 Description: Transparently upgrade your site to be HTML5 compatible. This plugin loads modernizr [www.modernizr.com] and sets the TinyMCE Editor Schema to HTML5
 Author: Rick Bush | 42U
 Author URI: http://www.42umbrellas.com/author/rick/
