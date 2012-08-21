@@ -68,7 +68,7 @@ class _42UHTML5 {
         $in['schema']='html5';
         $in['end_container_on_empty_block'] = 'true';
         $in['plugins'] .= ",visualblocks";
-        $in['visualblocks_default_state'] = 'true';
+        $in['visualblocks_default_state'] = 'false';
         // HTML5 formats
         $in['style_formats'] = "[
                     {title : 'Heading 1', block : 'h1'},
