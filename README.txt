@@ -55,6 +55,9 @@ See https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills fo
 
 == Changelog ==
 
+= 1.1.1 =
+* Set TinyMCE visualblocks plugin display default to false.
+
 = 1.1 =
 * Added TinyMCE visualblocks plugin. This makes HTML5 elements easier to work with in the visual editor.
 
