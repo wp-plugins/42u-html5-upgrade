@@ -261,7 +261,7 @@ if (!class_exists("FTU") || ( version_compare(FTU_VERSION, $this_FTU_version, '<
                 #toplevel_page_<?php echo $image_urls['plugin']?> .wp-menu-image {
                     background: url(<?php echo plugins_url($image_urls['admin-image'], __FILE__) ?>) no-repeat 6px 6px !important;
                 }
-                #toplevel_page_42-Umbrellas:hover .wp-menu-image, #menu-posts-HMG.wp-has-current-submenu .wp-menu-image {
+                #toplevel_page_<?php echo $image_urls['plugin']?>:hover .wp-menu-image, #menu-posts-<?php echo $image_urls['plugin']?>.wp-has-current-submenu .wp-menu-image {
                     background-position: 6px -26px !important;
                 }
                 /* Post Screen - 32px */
