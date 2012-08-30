@@ -244,7 +244,8 @@ if (!class_exists("FTU") || ( version_compare(FTU_VERSION, $this_FTU_version, '<
                                                                 'admin-image'=>'images/42U_adminmenu16-sprite.png',
                                                                 'posts-image'=>'images/42U_adminpage32.png',
                                                                 'admin-imageX2'=>'images/42U_adminmenu16-sprite_2x.png',
-                                                                'posts-imageX2'=>'images/42U_adminpage32_2x.png'
+                                                                'posts-imageX2'=>'images/42U_adminpage32_2x.png',
+                                                                'file' => __FILE__
                                                                 ));
             
         }
@@ -253,20 +254,21 @@ if (!class_exists("FTU") || ( version_compare(FTU_VERSION, $this_FTU_version, '<
                                                                 'admin-image'=>'images/42U_adminmenu16-sprite.png',
                                                                 'posts-image'=>'images/42U_adminpage32.png',
                                                                 'admin-imageX2'=>'images/42U_adminmenu16-sprite_2x.png',
-                                                                'posts-imageX2'=>'images/42U_adminpage32_2x.png'
+                                                                'posts-imageX2'=>'images/42U_adminpage32_2x.png',
+                                                                'file' => __FILE__
                                                                 )) {
     ?>
             <style>
                 /* Admin Menu - 16px */
                 #toplevel_page_<?php echo $image_urls['plugin']?> .wp-menu-image {
-                    background: url(<?php echo plugins_url($image_urls['admin-image'], __FILE__) ?>) no-repeat 6px 6px !important;
+                    background: url(<?php echo plugins_url($image_urls['admin-image'], $image_urls['file']) ?>) no-repeat 6px 6px !important;
                 }
                 #toplevel_page_<?php echo $image_urls['plugin']?>:hover .wp-menu-image, #menu-posts-<?php echo $image_urls['plugin']?>.wp-has-current-submenu .wp-menu-image {
                     background-position: 6px -26px !important;
                 }
                 /* Post Screen - 32px */
                 .icon32-posts-<?php echo $image_urls['plugin']?> {
-                    background: url(<?php echo plugins_url($image_urls['posts-image'], __FILE__) ?>) no-repeat left top !important;
+                    background: url(<?php echo plugins_url($image_urls['posts-image'], $image_urls['file']) ?>) no-repeat left top !important;
                 }
                 @media
                 only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -277,14 +279,14 @@ if (!class_exists("FTU") || ( version_compare(FTU_VERSION, $this_FTU_version, '<
                      
                     /* Admin Menu - 16px @2x */
                     #toplevel_page_<?php echo $image_urls['plugin']?> .wp-menu-image {
-                        background-image: url(<?php echo plugins_url($image_urls['admin-imageX2'], __FILE__) ?>) !important;
+                        background-image: url(<?php echo plugins_url($image_urls['admin-imageX2'], $image_urls['file']) ?>) !important;
                         -webkit-background-size: 16px 48px;
                         -moz-background-size: 16px 48px;
                         background-size: 16px 48px;
                     }
                     /* Post Screen - 32px @2x */
                     .icon32-posts-<?php echo $image_urls['plugin']?> {
-                        background-image: url(<?php echo plugins_url($image_urls['posts-imageX2'], __FILE__) ?>) !important;
+                        background-image: url(<?php echo plugins_url($image_urls['posts-imageX2'], $image_urls['file']) ?>) !important;
                         -webkit-background-size: 32px 32px;
                         -moz-background-size: 32px 32px;
                         background-size: 32px 32px;
