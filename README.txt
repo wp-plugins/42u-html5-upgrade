@@ -3,7 +3,7 @@ Contributors: 42urick
 Tags: HTML5
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ And good news for you, there is a polyfill for nearly every HTML5 feature that M
 See https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills for an extensive list of available polyfills.
 
 == Changelog ==
+
+= 1.1.2 =
+* Updated modernizr.js to 2.6.2.
 
 = 1.1.1 =
 * Set TinyMCE visualblocks plugin display default to false.

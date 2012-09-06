@@ -181,7 +181,7 @@ class _42UHTML5 {
                 The 42U HTML5 Upgrade prepares your older site for HTML5 and allows you to start using HTML5 structure tags right now in your posts and pages (section, aside, article, etc), regardless of the browser viewing them.
              </p>
              <p>   
-                The 42U HTML5 Upgrade plugin loads <a href="http://www.modernizr.com/" target="_blank">Modernizr</a>, enables the HTML5 Schema in the <a href="http://www.tinymce.com/" target="_blank">TinyMCE Editor</a> and adds HTML5 elements to the TinyMCE style list. The custom Modernizr build includes all CSS3, HTML5 and Misc tests, as well as the html5shiv w/printshiv and Modernizr.load(). See the options we used <a href="http://42umbrellas.admin.haleywebsite.com/files/2009/06/modernizer2.6.1build.png" target="_blank">here</a>.
+                The 42U HTML5 Upgrade plugin loads <a href="http://www.modernizr.com/" target="_blank">Modernizr</a>, enables the HTML5 Schema in the <a href="http://www.tinymce.com/" target="_blank">TinyMCE Editor</a> and adds HTML5 elements to the TinyMCE style list. The custom Modernizr build includes all CSS3, HTML5 and Misc tests, as well as the html5shiv w/printshiv and Modernizr.load(). See the options we used <a href="<?php echo plugins_url('images/modernizer.build.png', __FILE__) ?>" target="_blank">here</a>.
              </p>
              <p>
                 You can turn these functions off individually if you wish!
