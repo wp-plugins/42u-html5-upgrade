@@ -5,7 +5,7 @@ Plugin URI: http://www.42umbrellas.com/42u-html5-upgrade/
 Description: Transparently upgrade your site to be HTML5 compatible. This plugin loads modernizr [www.modernizr.com] and sets the TinyMCE Editor Schema to HTML5
 Author: Rick Bush | 42U
 Author URI: http://www.42umbrellas.com/author/rick/
-Version: 1.1.1
+Version: 1.1.2
 License: GPLv2 or later
 
 Copyright (c) 2012 42Umbrellas (http://www.42umbrellas.com)
@@ -156,7 +156,7 @@ class _42UHTML5 {
         /* Register our scripts. */
         if (!$this->options['disable_modernizr']) {
             wp_deregister_script('modernizr'); // deregister
-            wp_register_script( 'modernizr', plugins_url('js/modernizr.custom.2.6.1.js',__FILE__,false) );        
+            wp_register_script( 'modernizr', plugins_url('js/modernizr.custom.js',__FILE__,false) );        
             wp_enqueue_script( 'modernizr' );
         }
     }
