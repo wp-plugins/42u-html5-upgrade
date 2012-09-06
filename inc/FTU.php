@@ -596,7 +596,7 @@ if (!class_exists('WP_Widget_Taxonomy_Terms')) {
 }
 
 /* Helper Class for Custom Post Types */
-if (!class_exists('Custom_Post_Type')) {
+if (!class_exists('Custom_Post_Type_42U')) {
     class Custom_Post_Type_42U {
     
             public $post_type_name;
