@@ -55,6 +55,9 @@ See https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills fo
 
 == Changelog ==
 
+= 1.2 =
+* Added support for enqueing polyfills
+
 = 1.1.2 =
 * Updated modernizr.js to 2.6.2.
 
